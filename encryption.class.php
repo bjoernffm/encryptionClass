@@ -1,23 +1,20 @@
 <?php
 
   /**
-   * This class offers a wrapper to the php5-mcrypt module for encrypting and
-   * decrypting data. The encrypted data can be returned and expected in binary
-   * or hexadecimal form.
+   * This class offers a wrapper for the php5-mcrypt module that helps you
+   * encrypting and decrypting data. The encrypted data can be returned and
+   * expected in binary or hexadecimal form.
    * 
    * <code>
-   * $encryption = new mooEncryption();
-   * 
    * // Encrypt text
-   * $encrypted_text = $encryption->encrypt('this text is unencrypted');
+   * $encrypted_text = Encryption::encrypt('this text is unencrypted');
    * // Decrypt text
-   * $decrypted_text = $encryption->decrypt($encrypted_text); 
+   * $decrypted_text = Encryption::decrypt($encrypted_text); 
    * </code>           
    *    
    * @copyright Copyright (c) 2013, Björn Ebbrecht
    * @author Björn Ebbrecht <bjoern.ebbrecht@gmail.com>
-   * @package mooEncryption
-   * @version 1.1 
+   * @version 1.0
    */                 
   class Encryption {
   
@@ -34,7 +31,7 @@
     const MODE = MCRYPT_MODE_CBC;
     
     /**
-     * The very secret key for encrypting.
+     * The very secret key for encrypting. Use your own here!
      * @const string
      */   
     CONST DEFAULT_KEY = 'e2bf5a831914c';
